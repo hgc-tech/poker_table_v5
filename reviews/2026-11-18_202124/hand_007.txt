@@ -1,0 +1,45 @@
+HAND 7
+============================================================
+Level 1, blinds 10/20, ante 2
+You hold 4c Ac in the SB and finish +50.
+
+Percentages are the MCCFR bot's strategy in that player's spot
+(blueprint plus 300 ms of search per decision),
+seeing only what that player saw: the public actions of every
+earlier hand and that player's own cards.
+The action taken is in [brackets]; '-' means not available.
+Raise sizes are fractions of the pot after calling. A 75% raise
+raises to the current bet plus 0.75 x (Pot + To call); a 75% bet
+is 0.75 x Pot. Sizes that reach 60% of the most the
+player can bet become all-in and are marked =AI; when the action taken was
+all-in, those sizes are in [brackets] too.
+Equity is against the opponents' ranges as the bot estimates them.
+Stack and Pot are before the action. Cards are shown for every
+player, tabled or not.
+
+PREFLOP
+-------
+Player  Pos  Cards  Stack  Pot  To call  Action        Equity    Fold  Chk/Call  33%   50%  60%  75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  ------------  ------  ------  --------  ---  ----  ---  ---  ----  ----  ------
+You *   SB   4c Ac  2,155   12           posts SB 10
+Bot1    BB   Jh Tc  1,956   22           posts BB 20
+Bot2    UTG  Th 5s  3,100   42       20  folds            12%  [100%]        0%    -    0%    -   0%     -     -      0%
+Bot3    HJ   Ks Qh    980   42       20  calls 20         29%      0%     [29%]    -   47%    -  24%     -     -      0%
+Bot4    CO   8s 9s  1,956   62       20  folds            21%   [97%]        3%    -    0%    -   0%     -     -      0%
+Bot5    BTN  9d Qs  1,841   62       20  folds            23%  [100%]        0%    -    0%    -   0%     -     -      0%
+You *   SB   4c Ac  2,145   62       10  raises to 51     35%      0%       85%    -  [3%]    -  12%     -     -      0%
+Bot1    BB   Jh Tc  1,936  103       31  folds            25%  [100%]        0%    -     -    -   0%     -     -      0%
+Bot3    HJ   Ks Qh    960  103       31  folds            48%   [18%]       60%    -     -    -  22%     -     -      0%
+
+RESULT
+------
+Winner: You (+50)
+
+Player  Start    End  Net
+------  -----  -----  ---
+You     2,157  2,207  +50
+Bot1    1,958  1,936  -22
+Bot2    3,102  3,100   -2
+Bot3      982    960  -22
+Bot4    1,958  1,956   -2
+Bot5    1,843  1,841   -2

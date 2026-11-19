@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.strat
+*.zip*
+checkpoints/
+abstraction/*.bin

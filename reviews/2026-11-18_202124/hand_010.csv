@@ -1,0 +1,23 @@
+Hand 10,Level 2,Blinds 15/30,Ante 3
+
+PREFLOP
+Player,Pos,Cards,Stack,Pot,To call,Action,Equity,Fold,Chk/Call,33%,50%,60%,75%,100%,125%,All-in
+Bot3,SB,2c 9c,871,18,,posts SB 15,,,,,,,,,,
+Bot4,BB,Qh 9s,"1,948",33,,posts BB 30,,,,,,,,,,
+Bot5,UTG,6c Th,"1,833",63,30,folds,13%,[100%],0%,-,0%,-,0%,-,-,0%
+You *,HJ,Ad 8c,"2,448",63,30,raises to 60,26%,46%,8%,-,[28%],-,18%,-,-,0%
+Bot1,CO,Td Qs,"1,981",123,60,folds,21%,[100%],0%,-,-,-,0%,-,-,0%
+Bot2,BTN,3s Js,"2,901",123,60,folds,21%,[100%],0%,-,-,-,0%,-,-,0%
+Bot3,SB,2c 9c,856,123,45,folds,23%,[99%],0%,-,-,-,1%,-,-,0%
+Bot4,BB,Qh 9s,"1,918",123,30,folds,35%,[98%],0%,-,-,-,2%,-,-,0%
+
+RESULT
+Winner: You (+60)
+
+Player,Start,End,Net
+You,"2,451","2,511",+60
+Bot1,"1,984","1,981",-3
+Bot2,"2,904","2,901",-3
+Bot3,874,856,-18
+Bot4,"1,951","1,918",-33
+Bot5,"1,836","1,833",-3

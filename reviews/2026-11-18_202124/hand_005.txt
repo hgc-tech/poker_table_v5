@@ -1,0 +1,44 @@
+HAND 5
+============================================================
+Level 1, blinds 10/20, ante 2
+You hold 9d Jc in the UTG and finish -2.
+
+Percentages are the MCCFR bot's strategy in that player's spot
+(blueprint plus 300 ms of search per decision),
+seeing only what that player saw: the public actions of every
+earlier hand and that player's own cards.
+The action taken is in [brackets]; '-' means not available.
+Raise sizes are fractions of the pot after calling. A 75% raise
+raises to the current bet plus 0.75 x (Pot + To call); a 75% bet
+is 0.75 x Pot. Sizes that reach 60% of the most the
+player can bet become all-in and are marked =AI; when the action taken was
+all-in, those sizes are in [brackets] too.
+Equity is against the opponents' ranges as the bot estimates them.
+Stack and Pot are before the action. Cards are shown for every
+player, tabled or not.
+
+PREFLOP
+-------
+Player  Pos  Cards  Stack  Pot  To call  Action        Equity    Fold  Chk/Call  33%    50%  60%  75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  ------------  ------  ------  --------  ---  -----  ---  ---  ----  ----  ------
+Bot4    SB   5s 3s  1,970   12           posts SB 10
+Bot5    BB   6c 8h  1,875   22           posts BB 20
+You *   UTG  9d Jc  2,179   42       20  folds            20%   [98%]        0%    -     2%    -   0%     -     -      0%
+Bot1    HJ   Th 2c  1,960   42       20  folds            13%  [100%]        0%    -     0%    -   0%     -     -      0%
+Bot2    CO   Qd Ks  3,020   42       20  raises to 51     36%      0%       27%    -  [54%]    -  19%     -     -      0%
+Bot3    BTN  6h 8s    984   93       51  folds            21%  [100%]        0%    -      -    -   0%     -     -      0%
+Bot4    SB   5s 3s  1,960   93       41  folds            26%   [98%]        0%    -      -    -   2%     -     -      0%
+Bot5    BB   6c 8h  1,855   93       31  folds            36%   [97%]        0%    -      -    -   3%     -     -      0%
+
+RESULT
+------
+Winner: Bot2 (+40)
+
+Player  Start    End  Net
+------  -----  -----  ---
+You     2,181  2,179   -2
+Bot1    1,962  1,960   -2
+Bot2    3,022  3,062  +40
+Bot3      986    984   -2
+Bot4    1,972  1,960  -12
+Bot5    1,877  1,855  -22

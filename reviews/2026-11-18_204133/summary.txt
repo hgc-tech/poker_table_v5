@@ -1,0 +1,56 @@
+TOURNAMENT REVIEW
+============================================================
+Every decision in every hand was shown to the MCCFR bot
+(blueprint plus 300 ms of search per decision).
+The bot saw exactly what the acting player saw:
+the public actions of every earlier hand and the current hand
+with only that player's cards.
+hand_NNN.txt walks through each hand in aligned text columns;
+hand_NNN.csv holds the same tables for a spreadsheet.
+
+Your decisions reviewed:                      21
+Bot's most likely action matched yours:       43%
+Your decisions the bot gives at least 10%:    57%
+
+YOUR DECISIONS TO LOOK AT (the bot gives your play under 10%)
+-------------------------------------------------------------
+Hand  Decision  Street   You       Bot preferred  Bot's prob.
+----  --------  -------  --------  -------------  -----------
+   3         1  preflop  50%       Fold                    5%
+   3         2  preflop  Chk/Call  Fold                    0%
+   3         3  flop     Chk/Call  33%                     7%
+   3         4  turn     50%       Chk/Call                2%
+   3         5  turn     All-in    Fold                    0%
+   6         3  flop     Fold      Chk/Call                0%
+   7         1  preflop  50%       Fold                    3%
+   7         2  flop     Chk/Call  125%                    0%
+   7         3  turn     Chk/Call  125%                    0%
+
+HOW THE BOTS READ YOU
+---------------------
+Observed rates over the whole tournament. The bots blend these with
+the blueprint's own rates (a Bayesian prior), and the weight they put
+on the resulting model of you grows with the number of observations
+(restricted Nash response, at most 75%).
+
+Statistic              Your rate  Observations
+---------------------  ---------  ------------
+open (raise first in)        83%             6
+fold to 3-bet+               33%             3
+flop c-bet                     -             0
+river call vs bet              -             0
+
+Decisions observed: 21; weight on the model of you: 19%
+
+HANDS
+-----
+Hand  Your cards  Pos  Result  Decisions  Flagged  File
+----  ----------  ---  ------  ---------  -------  ------------
+   1  Ac 4s       CO      -53          2           hand_001.txt
+   2  2c 6s       HJ       -2          1           hand_002.txt
+   3  Ac 3d       UTG    +919          5        5  hand_003.txt
+   4  7s 5h       BB      -22          1           hand_004.txt
+   5  8d Qs       SB      -12          1           hand_005.txt
+   6  Ah Jc       BTN    -128          3        1  hand_006.txt
+   7  9h 6h       CO     +125          4        3  hand_007.txt
+   8  6c 5c       HJ     -334          4           hand_008.txt

@@ -1,0 +1,61 @@
+HAND 3
+============================================================
+Level 1, blinds 10/20, ante 2
+You hold Ac 3d in the UTG and finish +919.
+
+Percentages are the MCCFR bot's strategy in that player's spot
+(blueprint plus 300 ms of search per decision),
+seeing only what that player saw: the public actions of every
+earlier hand and that player's own cards.
+The action taken is in [brackets]; '-' means not available.
+Raise sizes are fractions of the pot after calling. A 75% raise
+raises to the current bet plus 0.75 x (Pot + To call); a 75% bet
+is 0.75 x Pot. Sizes that reach 60% of the most the
+player can bet become all-in and are marked =AI; when the action taken was
+all-in, those sizes are in [brackets] too.
+Equity is against the opponents' ranges as the bot estimates them.
+Stack and Pot are before the action. Cards are shown for every
+player, tabled or not.
+
+PREFLOP
+-------
+Player  Pos  Cards  Stack  Pot  To call  Action         Equity    Fold  Chk/Call  33%   50%  60%    75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  -------------  ------  ------  --------  ---  ----  ---  -----  ----  ----  ------
+Bot4    SB   Qs 6d  1,935   12           posts SB 10
+Bot5    BB   Ks 5d  1,994   22           posts BB 20
+You *   UTG  Ac 3d  1,943   42       20  raises to 51      17%     76%        0%    -  [5%]    -    19%     -     -      0%
+Bot1    HJ   4d 5h  1,994   93       51  folds             13%   [98%]        0%    -     -    -     2%     -     -      0%
+Bot2    CO   Tc 9s  2,077   93       51  folds             20%   [99%]        0%    -     -    -     1%     -     -      0%
+Bot3    BTN  Kd Qh  2,045   93       51  raises to 159     29%      0%       50%    -     -    -  [50%]     -     -      0%
+Bot4    SB   Qs 6d  1,925  252      149  folds             18%  [100%]        0%    -     -    -     0%     -     -      0%
+Bot5    BB   Ks 5d  1,974  252      139  folds             22%   [99%]        0%    -     -    -     1%     -     -      0%
+You *   UTG  Ac 3d  1,892  252      108  calls 108         41%     95%      [0%]    -     -    -     5%     -     -      0%
+
+FLOP: 3h Th 8c
+--------------
+Player  Pos  Cards  Stack  Pot  To call  Action  Equity  Fold  Chk/Call  33%  50%  60%  75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  ------  ------  ----  --------  ---  ---  ---  ---  ----  ----  ------
+You *   UTG  Ac 3d  1,784  360        0  checks     48%     -      [7%]  46%   1%  33%   0%    0%   13%      0%
+Bot3    BTN  Kd Qh  1,886  360        0  checks     25%     -     [84%]  11%   2%   1%   0%    1%    2%      0%
+
+TURN: 7s   (board 3h Th 8c 7s)
+------------------------------
+Player  Pos  Cards  Stack    Pot  To call  Action                    Equity    Fold  Chk/Call  33%   50%  60%    75%  100%  125%  All-in
+------  ---  -----  -----  -----  -------  ------------------------  ------  ------  --------  ---  ----  ---  -----  ----  ----  ------
+You *   UTG  Ac 3d  1,784    360        0  bets 180                     44%       -       86%  12%  [2%]   0%     0%    0%    0%      0%
+Bot3    BTN  Kd Qh  1,886    540      180  raises to 720                13%      0%        6%   3%    5%    -  [85%]    0%     -      0%
+You *   UTG  Ac 3d  1,604  1,260      540  raises to 1,784 (all-in)     31%    100%        0%    -     -    -      -     -     -    [0%]
+Bot3    BTN  Kd Qh  1,166  2,864    1,064  folds                        12%  [100%]        0%    -     -    -      -     -     -       -
+
+RESULT
+------
+Winner: You (+919)
+
+Player  Start    End   Net
+------  -----  -----  ----
+You     1,945  2,864  +919
+Bot1    1,996  1,994    -2
+Bot2    2,079  2,077    -2
+Bot3    2,047  1,166  -881
+Bot4    1,937  1,925   -12
+Bot5    1,996  1,974   -22

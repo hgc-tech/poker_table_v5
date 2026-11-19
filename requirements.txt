@@ -1,0 +1,6 @@
+numpy
+rich
+torch
+cython
+eval7
+pytest

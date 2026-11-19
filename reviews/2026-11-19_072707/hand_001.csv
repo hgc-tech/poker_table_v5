@@ -1,0 +1,43 @@
+Hand 1,Level 1,Blinds 10/20,Ante 2
+
+PREFLOP
+Player,Pos,Cards,Stack,Pot,To call,Action,Equity,Fold,Chk/Call,33%,50%,60%,75%,100%,125%,All-in
+Bot5,SB,4h 8s,"1,998",12,,posts SB 10,,,,,,,,,,
+You *,BB,2c Td,"1,998",22,,posts BB 20,,,,,,,,,,
+Bot1,UTG,Jd Ah,"1,998",42,20,raises to 51,26%,0%,19%,-,[54%],-,27%,-,-,0%
+Bot2,HJ,Kc 4s,"1,998",93,51,folds,13%,[99%],0%,-,-,-,1%,-,-,0%
+Bot3,CO,4d 6h,"1,998",93,51,folds,14%,[99%],0%,-,-,-,1%,-,-,0%
+Bot4,BTN,4c Ad,"1,998",93,51,folds,21%,[96%],0%,-,-,-,4%,-,-,0%
+Bot5,SB,4h 8s,"1,988",93,41,folds,22%,[100%],0%,-,-,-,0%,-,-,0%
+You *,BB,2c Td,"1,978",93,31,raises to 100,31%,100%,0%,-,-,-,[0%],-,-,0%
+Bot1,UTG,Jd Ah,"1,947",173,49,calls 49,56%,0%,[89%],-,0%,-,0%,10%,0%,0%
+
+FLOP: 9d As Ac
+Player,Pos,Cards,Stack,Pot,To call,Action,Equity,Fold,Chk/Call,33%,50%,60%,75%,100%,125%,All-in
+You *,BB,2c Td,"1,898",222,0,checks,14%,-,[89%],2%,0%,1%,7%,0%,2%,0%
+Bot1,UTG,Jd Ah,"1,898",222,0,bets 149,95%,-,0%,2%,5%,[0%],0%,0%,92%,0%
+You *,BB,2c Td,"1,898",371,149,raises to 350,4%,100%,0%,[0%],0%,-,0%,0%,0%,0%
+Bot1,UTG,Jd Ah,"1,749",721,201,calls 201,95%,0%,[98%],0%,0%,-,1%,-,-,0%
+
+TURN: Tc   (board 9d As Ac Tc)
+Player,Pos,Cards,Stack,Pot,To call,Action,Equity,Fold,Chk/Call,33%,50%,60%,75%,100%,125%,All-in
+You *,BB,2c Td,"1,548",922,0,bets 500,4%,-,100%,0%,[0%],0%,0%,0%,=AI,0%
+Bot1,UTG,Jd Ah,"1,548","1,422",500,calls 500,51%,0%,[100%],-,-,-,=AI,-,-,0%
+
+RIVER: 8d   (board 9d As Ac Tc 8d)
+Player,Pos,Cards,Stack,Pot,To call,Action,Equity,Fold,Chk/Call,33%,50%,60%,75%,100%,125%,All-in
+You *,BB,2c Td,"1,048","1,922",0,"bets 1,048 (all-in)",0%,-,84%,[5%],-,-,[=AI],-,[=AI],[10%]
+Bot1,UTG,Jd Ah,"1,048","2,970","1,048","calls 1,048 (all-in)",57%,0%,[100%],-,-,-,-,-,-,-
+
+RESULT
+You shows 2c Td: Two pair
+Bot1 shows Jd Ah: Three of a kind
+"Winner: Bot1 (+2,018) with Three of a kind"
+
+Player,Start,End,Net
+You,"2,000",0,"-2,000"
+Bot1,"2,000","4,018","+2,018"
+Bot2,"2,000","1,998",-2
+Bot3,"2,000","1,998",-2
+Bot4,"2,000","1,998",-2
+Bot5,"2,000","1,988",-12
