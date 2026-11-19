@@ -1,0 +1,61 @@
+HAND 2
+============================================================
+Level 1, blinds 10/20, ante 2
+You hold 8h 9s in the BTN and finish -2.
+
+Percentages are the MCCFR bot's strategy in that player's spot
+(blueprint plus 300 ms of search per decision),
+seeing only what that player saw: the public actions of every
+earlier hand and that player's own cards.
+The action taken is in [brackets]; '-' means not available.
+Raise sizes are fractions of the pot after calling. A 75% raise
+raises to the current bet plus 0.75 x (Pot + To call); a 75% bet
+is 0.75 x Pot. Sizes that reach 60% of the most the
+player can bet become all-in and are marked =AI; when the action taken was
+all-in, those sizes are in [brackets] too.
+Equity is against the opponents' ranges as the bot estimates them.
+Stack and Pot are before the action. Cards are shown for every
+player, tabled or not.
+
+PREFLOP
+-------
+Player  Pos  Cards  Stack  Pot  To call  Action         Equity    Fold  Chk/Call  33%    50%  60%    75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  -------------  ------  ------  --------  ---  -----  ---  -----  ----  ----  ------
+Bot1    SB   Qc 7h  1,976   12           posts SB 10
+Bot2    BB   Tc Ks  1,996   22           posts BB 20
+Bot3    UTG  Kc Kd  1,996   42       20  raises to 51      41%      0%       27%    -  [54%]    -    19%     -     -      0%
+Bot4    HJ   7s 3d  1,996   93       51  folds             10%  [100%]        0%    -      -    -     0%     -     -      0%
+Bot5    CO   9h 8s  1,996   93       51  folds             17%  [100%]        0%    -      -    -     0%     -     -      0%
+You *   BTN  8h 9s  2,028   93       51  folds             21%  [100%]        0%    -      -    -     0%     -     -      0%
+Bot1    SB   Qc 7h  1,966   93       41  folds             26%  [100%]        0%    -      -    -     0%     -     -      0%
+Bot2    BB   Tc Ks  1,976   93       31  raises to 144     42%     60%       30%    -      -    -  [10%]     -     -      0%
+Bot3    UTG  Kc Kd  1,945  217       93  calls 93          73%      0%    [100%]    -      -    -     0%     -     -      0%
+
+FLOP: 6c 9c Th
+--------------
+Player  Pos  Cards  Stack    Pot  To call  Action         Equity  Fold  Chk/Call    33%    50%  60%  75%  100%  125%  All-in
+------  ---  -----  -----  -----  -------  -------------  ------  ----  --------  -----  -----  ---  ---  ----  ----  ------
+Bot2    BB   Tc Ks  1,852    310        0  bets 155          62%     -       34%     6%  [10%]   0%  15%    2%   33%      0%
+Bot3    UTG  Kc Kd  1,852    465      155  raises to 465     68%    0%        0%     0%   [0%]    -   0%    0%   94%      5%
+Bot2    BB   Tc Ks  1,697    930      310  raises to 874     57%    0%        0%  [99%]     1%    -    -     -     -      0%
+Bot3    UTG  Kc Kd  1,387  1,649      409  calls 409         50%    0%    [100%]      -      -    -    -     -     -       -
+
+TURN: 4c   (board 6c 9c Th 4c)
+------------------------------
+Player  Pos  Cards  Stack    Pot  To call  Action             Equity    Fold  Chk/Call   33%  50%  60%    75%  100%   125%  All-in
+------  ---  -----  -----  -----  -------  -----------------  ------  ------  --------  ----  ---  ---  -----  ----  -----  ------
+Bot2    BB   Tc Ks    978  2,058        0  bets 978 (all-in)     87%       -        0%  [2%]    -    -  [=AI]     -  [=AI]   [98%]
+Bot3    UTG  Kc Kd    978  3,036      978  folds                 17%  [100%]        0%     -    -    -      -     -      -       -
+
+RESULT
+------
+Winner: Bot2 (+1,038)
+
+Player  Start    End     Net
+------  -----  -----  ------
+You     2,030  2,028      -2
+Bot1    1,978  1,966     -12
+Bot2    1,998  3,036  +1,038
+Bot3    1,998    978  -1,020
+Bot4    1,998  1,996      -2
+Bot5    1,998  1,996      -2

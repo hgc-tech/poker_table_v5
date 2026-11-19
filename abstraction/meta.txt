@@ -1,0 +1,8 @@
+# Card abstraction built by pbcfr (v5). Level 0 is the finest.
+version = 5
+levels = 4
+flop_buckets = 1000 500 200 100
+turn_buckets = 1000 500 200 100
+river_buckets = 1000 500 200 100
+flop_feature_level = 2
+hash = 3785527627516499674

@@ -1,0 +1,45 @@
+HAND 1
+============================================================
+Level 1, blinds 10/20, ante 2
+You hold Ac 4s in the CO and finish -53.
+
+Percentages are the MCCFR bot's strategy in that player's spot
+(blueprint plus 300 ms of search per decision),
+seeing only what that player saw: the public actions of every
+earlier hand and that player's own cards.
+The action taken is in [brackets]; '-' means not available.
+Raise sizes are fractions of the pot after calling. A 75% raise
+raises to the current bet plus 0.75 x (Pot + To call); a 75% bet
+is 0.75 x Pot. Sizes that reach 60% of the most the
+player can bet become all-in and are marked =AI; when the action taken was
+all-in, those sizes are in [brackets] too.
+Equity is against the opponents' ranges as the bot estimates them.
+Stack and Pot are before the action. Cards are shown for every
+player, tabled or not.
+
+PREFLOP
+-------
+Player  Pos  Cards  Stack  Pot  To call  Action         Equity    Fold  Chk/Call  33%    50%  60%    75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  -------------  ------  ------  --------  ---  -----  ---  -----  ----  ----  ------
+Bot2    SB   Qs Kd  1,998   12           posts SB 10
+Bot3    BB   9h 2c  1,998   22           posts BB 20
+Bot4    UTG  8c Td  1,998   42       20  folds             18%  [100%]        0%    -     0%    -     0%     -     -      0%
+Bot5    HJ   2s Th  1,998   42       20  folds             12%  [100%]        0%    -     0%    -     0%     -     -      0%
+You *   CO   Ac 4s  1,998   42       20  raises to 51      27%     23%        7%    -  [45%]    -    25%     -     -      0%
+Bot1    BTN  3c 6d  1,998   93       51  folds             16%  [100%]        0%    -      -    -     0%     -     -      0%
+Bot2    SB   Qs Kd  1,988   93       41  raises to 152     37%      1%       50%    -      -    -  [50%]     -     -      0%
+Bot3    BB   9h 2c  1,978  235      132  folds             19%  [100%]        0%    -      -    -     0%     -     -      0%
+You *   CO   Ac 4s  1,947  235      101  folds             40%   [51%]        0%    -      -    -    49%     -     -      0%
+
+RESULT
+------
+Winner: Bot2 (+81)
+
+Player  Start    End  Net
+------  -----  -----  ---
+You     2,000  1,947  -53
+Bot1    2,000  1,998   -2
+Bot2    2,000  2,081  +81
+Bot3    2,000  1,978  -22
+Bot4    2,000  1,998   -2
+Bot5    2,000  1,998   -2

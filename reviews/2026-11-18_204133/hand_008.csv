@@ -1,0 +1,31 @@
+Hand 8,Level 1,Blinds 10/20,Ante 2
+
+PREFLOP
+Player,Pos,Cards,Stack,Pot,To call,Action,Equity,Fold,Chk/Call,33%,50%,60%,75%,100%,125%,All-in
+Bot3,SB,Ks Kc,"1,136",12,,posts SB 10,,,,,,,,,,
+Bot4,BB,8h As,"1,957",22,,posts BB 20,,,,,,,,,,
+Bot5,UTG,Qs 3s,"1,812",42,20,folds,16%,[100%],0%,-,0%,-,0%,-,-,0%
+You *,HJ,6c 5c,"2,825",42,20,raises to 51,21%,41%,7%,-,[41%],-,11%,-,-,0%
+Bot1,CO,4s 4h,"2,138",93,51,folds,19%,[91%],4%,-,-,-,5%,-,-,0%
+Bot2,BTN,7h Jc,"2,120",93,51,folds,20%,[100%],0%,-,-,-,0%,-,-,0%
+Bot3,SB,Ks Kc,"1,126",93,41,raises to 152,62%,0%,0%,-,-,-,[100%],-,-,0%
+Bot4,BB,8h As,"1,937",235,132,folds,24%,[98%],0%,-,-,-,2%,-,-,0%
+You *,HJ,6c 5c,"2,774",235,101,calls 101,34%,5%,[95%],-,-,-,0%,-,-,0%
+
+FLOP: 2d 7s Th
+Player,Pos,Cards,Stack,Pot,To call,Action,Equity,Fold,Chk/Call,33%,50%,60%,75%,100%,125%,All-in
+Bot3,SB,Ks Kc,984,336,0,checks,82%,-,[8%],3%,0%,0%,16%,16%,58%,0%
+You *,HJ,6c 5c,"2,673",336,0,bets 180,13%,-,43%,1%,[37%],14%,0%,6%,0%,0%
+Bot3,SB,Ks Kc,984,516,180,raises to 984 (all-in),81%,0%,2%,1%,28%,-,[=AI],-,-,[70%]
+You *,HJ,6c 5c,"2,493","1,500",804,folds,14%,[100%],0%,-,-,-,-,-,-,-
+
+RESULT
+Winner: Bot3 (+362)
+
+Player,Start,End,Net
+You,"2,827","2,493",-334
+Bot1,"2,140","2,138",-2
+Bot2,"2,122","2,120",-2
+Bot3,"1,138","1,500",+362
+Bot4,"1,959","1,937",-22
+Bot5,"1,814","1,812",-2

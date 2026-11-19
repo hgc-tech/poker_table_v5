@@ -1,0 +1,51 @@
+HAND 2
+============================================================
+Level 1, blinds 10/20, ante 2
+You hold 2c 6s in the HJ and finish -2.
+
+Percentages are the MCCFR bot's strategy in that player's spot
+(blueprint plus 300 ms of search per decision),
+seeing only what that player saw: the public actions of every
+earlier hand and that player's own cards.
+The action taken is in [brackets]; '-' means not available.
+Raise sizes are fractions of the pot after calling. A 75% raise
+raises to the current bet plus 0.75 x (Pot + To call); a 75% bet
+is 0.75 x Pot. Sizes that reach 60% of the most the
+player can bet become all-in and are marked =AI; when the action taken was
+all-in, those sizes are in [brackets] too.
+Equity is against the opponents' ranges as the bot estimates them.
+Stack and Pot are before the action. Cards are shown for every
+player, tabled or not.
+
+PREFLOP
+-------
+Player  Pos  Cards  Stack  Pot  To call  Action        Equity    Fold  Chk/Call  33%  50%  60%    75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  ------------  ------  ------  --------  ---  ---  ---  -----  ----  ----  ------
+Bot3    SB   8d 6h  1,976   12           posts SB 10
+Bot4    BB   Kd 4d  1,996   22           posts BB 20
+Bot5    UTG  3c Ts  1,996   42       20  folds            11%  [100%]        0%    -   0%    -     0%     -     -      0%
+You *   HJ   2c 6s  1,945   42       20  folds            11%  [100%]        0%    -   0%    -     0%     -     -      0%
+Bot1    CO   8s Qh  1,996   42       20  folds            25%   [99%]        0%    -   0%    -     1%     -     -      0%
+Bot2    BTN  5h 2h  2,079   42       20  folds            28%   [99%]        0%    -   0%    -     0%     -     -      0%
+Bot3    SB   8d 6h  1,966   42       10  raises to 59     44%     43%       45%    -   2%    -  [11%]     -     -      0%
+Bot4    BB   Kd 4d  1,976   91       39  calls 39         48%      0%     [99%]    -    -    -     1%     -     -      0%
+
+FLOP: As 9c 9h
+--------------
+Player  Pos  Cards  Stack  Pot  To call  Action   Equity   Fold  Chk/Call  33%  50%  60%    75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  -------  ------  -----  --------  ---  ---  ---  -----  ----  ----  ------
+Bot3    SB   8d 6h  1,917  130        0  bets 98     28%      -       21%  19%   0%   6%  [20%]   10%   24%      0%
+Bot4    BB   Kd 4d  1,937  228       98  folds       45%  [82%]       12%   5%   0%    -     0%    0%    0%      0%
+
+RESULT
+------
+Winner: Bot3 (+69)
+
+Player  Start    End  Net
+------  -----  -----  ---
+You     1,947  1,945   -2
+Bot1    1,998  1,996   -2
+Bot2    2,081  2,079   -2
+Bot3    1,978  2,047  +69
+Bot4    1,998  1,937  -61
+Bot5    1,998  1,996   -2

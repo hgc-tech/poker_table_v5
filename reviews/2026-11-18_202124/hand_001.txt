@@ -1,0 +1,44 @@
+HAND 1
+============================================================
+Level 1, blinds 10/20, ante 2
+You hold Ts Qh in the SB and finish +30.
+
+Percentages are the MCCFR bot's strategy in that player's spot
+(blueprint plus 300 ms of search per decision),
+seeing only what that player saw: the public actions of every
+earlier hand and that player's own cards.
+The action taken is in [brackets]; '-' means not available.
+Raise sizes are fractions of the pot after calling. A 75% raise
+raises to the current bet plus 0.75 x (Pot + To call); a 75% bet
+is 0.75 x Pot. Sizes that reach 60% of the most the
+player can bet become all-in and are marked =AI; when the action taken was
+all-in, those sizes are in [brackets] too.
+Equity is against the opponents' ranges as the bot estimates them.
+Stack and Pot are before the action. Cards are shown for every
+player, tabled or not.
+
+PREFLOP
+-------
+Player  Pos  Cards  Stack  Pot  To call  Action        Equity    Fold  Chk/Call  33%    50%  60%  75%  100%  125%  All-in
+------  ---  -----  -----  ---  -------  ------------  ------  ------  --------  ---  -----  ---  ---  ----  ----  ------
+You *   SB   Ts Qh  1,998   12           posts SB 10
+Bot1    BB   2h 3c  1,998   22           posts BB 20
+Bot2    UTG  Qs 7c  1,998   42       20  folds            15%  [100%]        0%    -     0%    -   0%     -     -      0%
+Bot3    HJ   6s 2d  1,998   42       20  folds            11%  [100%]        0%    -     0%    -   0%     -     -      0%
+Bot4    CO   4h Ks  1,998   42       20  folds            25%  [100%]        0%    -     0%    -   0%     -     -      0%
+Bot5    BTN  9d 6c  1,998   42       20  folds            29%   [98%]        0%    -     0%    -   2%     -     -      0%
+You *   SB   Ts Qh  1,988   42       10  raises to 51     59%      0%       38%    -  [38%]    -  24%     -     -      0%
+Bot1    BB   2h 3c  1,978   83       31  folds            29%  [100%]        0%    -      -    -   0%     -     -      0%
+
+RESULT
+------
+Winner: You (+30)
+
+Player  Start    End  Net
+------  -----  -----  ---
+You     2,000  2,030  +30
+Bot1    2,000  1,978  -22
+Bot2    2,000  1,998   -2
+Bot3    2,000  1,998   -2
+Bot4    2,000  1,998   -2
+Bot5    2,000  1,998   -2

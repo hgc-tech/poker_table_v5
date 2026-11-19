@@ -1,0 +1,92 @@
+# Settings for the v5 MCCFR blueprint bots. Read by the trainer (native/pbcfr,
+# usually run through train_cfr.py), play.py and compare.py. Relative paths
+# are relative to this file.
+#
+# "key@N = ..." overrides "key = ..." for N-player blueprints, for example
+# "postflop_bet@6 = 0.5 1.0". Run "python train_cfr.py --memory" after any
+# change to see how much RAM each blueprint needs and which bucket level it
+# will use.
+
+# --- Card abstraction ----------------------------------------------------------
+# Preflop always uses the 169 lossless starting-hand classes. Each list gives
+# the bucket counts per level, finest first. Level 0 is built by k-means; each
+# further level merges level 0 into fewer buckets. Every blueprint trains at
+# the finest level whose full tree fits in memory_gb (see bucket_level).
+# v4 used 200 buckets per street.
+abstraction_dir = abstraction
+flop_buckets  = 1000 500 200 100
+turn_buckets  = 1000 500 200 100
+river_buckets = 1000 500 200 100
+flop_feature_buckets = 200       # turn buckets used to describe a flop hand (potential-aware)
+river_sample_points = 2000000    # points used to fit the river clusters
+turn_sample_points = 400000      # ... the turn clusters
+flop_sample_points = 200000      # ... the flop clusters
+kmeans_iterations = 30
+
+# --- Memory ------------------------------------------------------------------------
+# Hard cap on regret memory for one blueprint (GiB). Training runs one
+# blueprint at a time. Leave room for the system: 22 on a machine with 27 free.
+memory_gb = 90
+# bucket_level = auto            # or a level number; per blueprint: bucket_level@6x100 = 3
+
+# --- Action abstraction of the blueprints ---------------------------------------
+# Raise sizes as fractions of the pot after calling (a 0.75 raise makes it
+# current bet + 0.75 x (pot + to call)). All-in is always available. "none"
+# means only all-in. Sizes that reach allin_snap of the stack become all-in.
+preflop_open   = 0.33 0.5 0.75   # first raise preflop (about 2, 2.5 and 3.3 bb heads-up)
+preflop_3bet   = 0.6 1.0
+preflop_later  = 0.75
+postflop_bet   = 0.33 0.75 1.25  # first bet on a street, two players in the pot
+postflop_raise = 0.75
+postflop_later = none
+multiway_bet   = 0.5 1.0         # first bet on a street with 3+ players in the pot
+multiway_raise = none
+max_raises_preflop  = 4
+max_raises_postflop = 3
+max_raises_multiway = 2
+allin_snap = 0.6
+# Five- and six-player trees are far larger; they get fewer preflop sizes and raises.
+preflop_open@5 = 0.5 0.75
+preflop_open@6 = 0.5 0.75
+preflop_3bet@5 = 0.75
+preflop_3bet@6 = 0.75
+max_raises_postflop@5 = 2
+max_raises_postflop@6 = 2
+max_raises_multiway@5 = 1
+max_raises_multiway@6 = 1
+
+# --- Search size menu (at the table; no retraining needed to change) ----------
+# The bot's own decision chooses from the full menu; when the search looks
+# ahead at later decisions it uses the shorter "inner" menus (two players in
+# the pot; multiway uses the blueprint's sizes).
+search_bet           = 0.2 0.33 0.5 0.67 0.75 1.0 1.25 1.5 2.0 3.0
+search_raise         = 0.33 0.5 0.75 1.0 1.5 2.0
+search_inner_bet     = 0.33 0.75 1.25
+search_inner_raise   = 0.75
+search_preflop_open  = 0.25 0.33 0.5 0.75 1.0
+search_preflop_raise = 0.5 0.75 1.0 1.5
+
+# --- Tournament --------------------------------------------------------------------
+ante_bb = 0.1                    # the table's ante is 10% of the big blind
+# Prize shares for 1st, 2nd, ... (ICM utility). These are the 15/8/5/3/2/1 tournament
+# points divided by their total (34). Keep them summing to 1; changing them
+# requires deleting checkpoints/ and retraining (the abstraction is unaffected).
+payouts = 0.441 0.235 0.147 0.088 0.059 0.029
+
+# --- Blueprints ----------------------------------------------------------------------
+# One blueprint per (players, stack depth). At the table each decision uses
+# the blueprint for the number of players dealt in and the nearest stack.
+players = 2 3 4 5 6
+stacks_bb = 10 15 20 25 30 40 60 100
+blueprint_dir = blueprints       # exported strategies (.strat) used by play.py
+checkpoint_dir = checkpoints     # training state (.ckpt), resumable
+# skip = 6x100                   # blueprints not to train
+
+# --- Training ------------------------------------------------------------------------
+threads = 0                      # 0 = all cores
+checkpoint_minutes = 30
+discount_interval = 10000000     # Linear CFR: discount every this many iterations
+linear_until = 2000000000        # ... until this iteration
+prune_after = 200000000          # negative-regret pruning from this iteration
+prune_threshold = -0.5           # prune actions whose regret is below this (x chips at the table)
+regret_floor = -2.0              # regrets never go below this (same units)
